@@ -5,7 +5,7 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
-      - name: Clone submodules
-        run: git submodule update --recursive --init
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v1
       - name: Run tests
         run: make test
